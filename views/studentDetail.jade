@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    a(href='/students') Back
+    h1= student.firstname
+    table
+        tr
+            td= student.firstname
+            td= student.lastname
+            td= student.age
+            td= student.school
+            td= student.isEnrolled

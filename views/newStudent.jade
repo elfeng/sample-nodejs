@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+    form(method='POST', action=action)
+        input(name='firstname', type='text', placeholder='First Name', value=student.firstname)
+        br
+        input(name='lastname', type='text', placeholder='Last Name', value=student.lastname)
+        br
+        input(name='age', type='text', placeholder='Age', value=student.age)
+        br
+        input(name='school', type='text', placeholder='School', value=student.school)
+        br
+        label Enrollment
+        br
+        select(name='isEnrolled')
+            if student.isEnrolled == true
+                option(value='true', selected='selected') Yes
+                option(value='false') No
+            else
+                option(value='true') Yes
+                option(value='false', selected='selected') No
+        br
+        input(type='submit')

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  h1 Search Students
+  form(method='POST', action='/students/search')
+    input(name='firstname', type='text', placeholder='Student Name')
+    br
+    input(type='submit')
+  a(href='/students') Show All
+
+  //  h1= title
+  //  h2= author
+  //  p Hello World! Welcome to #{title} by #{author}
+

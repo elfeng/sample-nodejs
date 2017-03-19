@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  p Show all student info:
+  table
+    tr
+      th First Name
+      th Last Name
+      th Age
+      th School
+      th Enrollment
+    each student in students
+      tr
+        td
+          a(href='/students/#{student._id}')= student.firstname
+        td= student.lastname
+        td= student.age
+        td= student.school
+        td= student.isEnrolled
+        td
+          a(href='/students/update/#{student._id}') Edit
+        td
+          a(href='/students/remove/#{student._id}') Remove
+  a(href='/students/add') Add
+  br
+  a(href='/') Search
